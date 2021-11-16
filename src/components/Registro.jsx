@@ -12,7 +12,6 @@ const Registro = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
  
   const onSubmit = (e) => {
-  
     singUp(e.email,e.password);
     alert("REGISTRO EXITOSO!")
     navigate(`/login`);

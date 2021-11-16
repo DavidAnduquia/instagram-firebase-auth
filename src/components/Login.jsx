@@ -17,7 +17,7 @@ const Login = () => {
     login(e.email, e.password)
       .then((data) => {
         console.log(data.user);
-        alert("Biemvenido");
+        alert("Bienvenido");
         navigate(`/home/${data.user.email}`);
         
       })
