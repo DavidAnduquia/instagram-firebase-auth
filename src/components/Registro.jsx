@@ -2,19 +2,20 @@ import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import {  singUp } from "../Services/FirebaseAuth";
 
-import {
-    BrowserRouter as Router,
-    Link 
-  }  from 'react-router-dom';
+import { BrowserRouter as Router, Link, useNavigate } from "react-router-dom";
+
 
 const Registro = () => {
 
+  let navigate = useNavigate();
  
   const { register, handleSubmit, formState: { errors } } = useForm();
  
   const onSubmit = (e) => {
   
-    singUp(e.email,e.password); 
+    singUp(e.email,e.password);
+    alert("REGISTRO EXITOSO!")
+    navigate(`/login`);
   }
  
 

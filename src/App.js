@@ -20,13 +20,11 @@ function App() {
 
     <Router>
    
-    <div className="App">
-    <h1> Menu de rutas </h1>
- 
+    <div className="App"> 
           <Routes>
               <Route path="/" element={ <Login />} />
               <Route path="/login" element={ <Login />} />
-              <Route path="/ " element={ <Registro />} />
+              <Route path="/registro" element={ <Registro />} />
               <Route path="/home/:email"  element={ <Home />} />
           </Routes>
        
